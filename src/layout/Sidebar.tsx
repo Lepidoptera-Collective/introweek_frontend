@@ -16,7 +16,7 @@ import IconMenuBook from '@material-ui/icons/MenuBook';
 import IconHelpOutline from '@material-ui/icons/HelpOutline';
 import IconPersonOutline from '@material-ui/icons/PersonOutline';
 import MenuItem from 'components/MenuItem';
-import logo from './dummy_logo.png';
+import logo from '../assets/logos/Onlinetro-Logo-Rasterized.png';
 
 const drawerWidth = 240;
 
