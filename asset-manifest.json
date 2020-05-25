@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/introweek_frontend/static/js/main.a40b71cd.chunk.js",
+    "main.js.map": "/introweek_frontend/static/js/main.a40b71cd.chunk.js.map",
+    "runtime-main.js": "/introweek_frontend/static/js/runtime-main.2bf71b0e.js",
+    "runtime-main.js.map": "/introweek_frontend/static/js/runtime-main.2bf71b0e.js.map",
+    "static/js/2.4e366583.chunk.js": "/introweek_frontend/static/js/2.4e366583.chunk.js",
+    "static/js/2.4e366583.chunk.js.map": "/introweek_frontend/static/js/2.4e366583.chunk.js.map",
+    "index.html": "/introweek_frontend/index.html",
+    "precache-manifest.6b92ff7169895e7c52db9ae89bc6c6fa.js": "/introweek_frontend/precache-manifest.6b92ff7169895e7c52db9ae89bc6c6fa.js",
+    "service-worker.js": "/introweek_frontend/service-worker.js",
+    "static/js/2.4e366583.chunk.js.LICENSE.txt": "/introweek_frontend/static/js/2.4e366583.chunk.js.LICENSE.txt",
+    "static/media/dummy_logo.png": "/introweek_frontend/static/media/dummy_logo.782612e8.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2bf71b0e.js",
+    "static/js/2.4e366583.chunk.js",
+    "static/js/main.a40b71cd.chunk.js"
+  ]
+}
