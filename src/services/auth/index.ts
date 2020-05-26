@@ -38,6 +38,10 @@ class AuthService {
   static storeToken(token: string) {
     Cookie.set(TOKEN_STORAGE_KEY, token);
   }
+
+  static removeToken() {
+    Cookie.remove(TOKEN_STORAGE_KEY);
+  }
 }
 
 export default AuthService;

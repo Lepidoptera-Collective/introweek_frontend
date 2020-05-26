@@ -34,7 +34,6 @@ const theme = createMuiTheme({
     },
     text: {
       primary: '#545454',
-      secondary: '#fefefe',
     },
   },
 });

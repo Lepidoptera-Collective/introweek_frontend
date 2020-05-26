@@ -17,6 +17,8 @@ import IconHelpOutline from '@material-ui/icons/HelpOutline';
 import IconPersonOutline from '@material-ui/icons/PersonOutline';
 import MenuItem from 'components/MenuItem';
 import logo from '../assets/logos/Logo.png';
+import { useHistory } from 'react-router-dom';
+import AuthService from 'services/auth';
 
 const drawerWidth = 240;
 
@@ -37,62 +39,6 @@ const useStyles = makeStyles((theme) =>
   })
 );
 
-const appMenuItems = [
-  {
-    name: 'LiveStream',
-    link: '/',
-    icon: IconVideocam,
-  },
-  {
-    name: 'Chats',
-    link: '/chats',
-    icon: IconQuestionAnswer,
-  },
-  {
-    name: 'Mijn vereniging',
-    link: '/vereniging',
-    icon: IconSchool,
-  },
-  {
-    name: 'Smoelenboek',
-    link: '/smoelen-boek',
-    icon: IconPeople,
-  },
-  {
-    name: 'Programma',
-    link: '/programma',
-    icon: IconSchedule,
-  },
-  {
-    name: 'Pentagon',
-    link: '/pentagon',
-    icon: IconMenuBook,
-  },
-  {
-    name: 'F.A.Q.',
-    link: '/faq',
-    icon: IconHelpOutline,
-  },
-  {
-    name: 'Account',
-    icon: IconPersonOutline,
-    items: [
-      {
-        name: 'Mijn gegevens',
-        link: '/account',
-      },
-      {
-        name: 'Voorkeuren',
-        link: '/account/voorkeuren',
-      },
-      {
-        name: 'Uitloggen',
-        onClick: () => console.log('logout'),
-      },
-    ],
-  },
-];
-
 type Props = {
   mobileOpen: boolean;
   handleDrawerToggle: () => void;
@@ -101,6 +47,66 @@ type Props = {
 const Sidebar: React.FC<Props> = ({ mobileOpen, handleDrawerToggle }) => {
   const theme = useTheme();
   const classes = useStyles();
+  const history = useHistory();
+
+  const appMenuItems = [
+    {
+      name: 'LiveStream',
+      link: '/',
+      icon: IconVideocam,
+    },
+    {
+      name: 'Chats',
+      link: '/chats',
+      icon: IconQuestionAnswer,
+    },
+    {
+      name: 'Mijn vereniging',
+      link: '/vereniging',
+      icon: IconSchool,
+    },
+    {
+      name: 'Smoelenboek',
+      link: '/smoelen-boek',
+      icon: IconPeople,
+    },
+    {
+      name: 'Programma',
+      link: '/programma',
+      icon: IconSchedule,
+    },
+    {
+      name: 'Pentagon',
+      link: '/pentagon',
+      icon: IconMenuBook,
+    },
+    {
+      name: 'F.A.Q.',
+      link: '/faq',
+      icon: IconHelpOutline,
+    },
+    {
+      name: 'Account',
+      icon: IconPersonOutline,
+      items: [
+        {
+          name: 'Mijn gegevens',
+          link: '/account',
+        },
+        {
+          name: 'Voorkeuren',
+          link: '/account/voorkeuren',
+        },
+        {
+          name: 'Uitloggen',
+          onClick: () => {
+            AuthService.removeToken();
+            history.push('/login');
+          },
+        },
+      ],
+    },
+  ];
 
   const drawer = (
     <React.Fragment>
