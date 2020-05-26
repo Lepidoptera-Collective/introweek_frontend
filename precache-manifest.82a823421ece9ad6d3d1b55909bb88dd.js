@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5712dc96e411251dd9ef51b15d730f25",
+    "revision": "40d830542e7b81a50d5bf4356394aecf",
     "url": "/introweek_frontend/index.html"
   },
   {
@@ -12,15 +12,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/introweek_frontend/static/js/2.5e78e8b4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a64183a7ffd3a643e4d8",
-    "url": "/introweek_frontend/static/js/main.2134de02.chunk.js"
+    "revision": "091e46c7ccebf2e6353c",
+    "url": "/introweek_frontend/static/js/main.1f9f37e3.chunk.js"
   },
   {
     "revision": "d0bb557d2a074d2602c7",
     "url": "/introweek_frontend/static/js/runtime-main.2bf71b0e.js"
   },
   {
-    "revision": "782612e8d660b8d81516f14dfe278cac",
-    "url": "/introweek_frontend/static/media/dummy_logo.782612e8.png"
+    "revision": "6949b376a8e30092b36c3cdf835cb760",
+    "url": "/introweek_frontend/static/media/Onlinetro-Logo-Rasterized.6949b376.png"
   }
 ]);

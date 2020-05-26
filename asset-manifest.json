@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/introweek_frontend/static/js/main.2134de02.chunk.js",
-    "main.js.map": "/introweek_frontend/static/js/main.2134de02.chunk.js.map",
+    "main.js": "/introweek_frontend/static/js/main.1f9f37e3.chunk.js",
+    "main.js.map": "/introweek_frontend/static/js/main.1f9f37e3.chunk.js.map",
     "runtime-main.js": "/introweek_frontend/static/js/runtime-main.2bf71b0e.js",
     "runtime-main.js.map": "/introweek_frontend/static/js/runtime-main.2bf71b0e.js.map",
     "static/js/2.5e78e8b4.chunk.js": "/introweek_frontend/static/js/2.5e78e8b4.chunk.js",
     "static/js/2.5e78e8b4.chunk.js.map": "/introweek_frontend/static/js/2.5e78e8b4.chunk.js.map",
     "index.html": "/introweek_frontend/index.html",
-    "precache-manifest.4f7126301dd2a191406fcdcb95bb2c9e.js": "/introweek_frontend/precache-manifest.4f7126301dd2a191406fcdcb95bb2c9e.js",
+    "precache-manifest.82a823421ece9ad6d3d1b55909bb88dd.js": "/introweek_frontend/precache-manifest.82a823421ece9ad6d3d1b55909bb88dd.js",
     "service-worker.js": "/introweek_frontend/service-worker.js",
     "static/js/2.5e78e8b4.chunk.js.LICENSE.txt": "/introweek_frontend/static/js/2.5e78e8b4.chunk.js.LICENSE.txt",
-    "static/media/dummy_logo.png": "/introweek_frontend/static/media/dummy_logo.782612e8.png"
+    "static/media/Onlinetro-Logo-Rasterized.png": "/introweek_frontend/static/media/Onlinetro-Logo-Rasterized.6949b376.png"
   },
   "entrypoints": [
     "static/js/runtime-main.2bf71b0e.js",
     "static/js/2.5e78e8b4.chunk.js",
-    "static/js/main.2134de02.chunk.js"
+    "static/js/main.1f9f37e3.chunk.js"
   ]
 }
