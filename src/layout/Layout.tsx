@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const Layout: React.FC = ({ children }) => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('xs'));
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const classes = useStyles();
 
@@ -40,7 +40,7 @@ const Layout: React.FC = ({ children }) => {
   return (
     <div className={classes.root}>
       {isMobile && (
-        <AppBar position="fixed">
+        <AppBar position="fixed" color="primary">
           <Toolbar>
             <IconButton
               color="inherit"
@@ -52,7 +52,7 @@ const Layout: React.FC = ({ children }) => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap>
-              Responsive drawer
+              Introweek
             </Typography>
           </Toolbar>
         </AppBar>
