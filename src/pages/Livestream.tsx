@@ -25,6 +25,7 @@ const LiveStream = () => {
       const drawerWidth = isMobile ? 0 : DRAWER_WIDTH;
       const width = windowSize.width - drawerWidth - pad;
       const height = width * (9 / 16);
+      const unusedVar = height;
 
       setSize({
         height,
