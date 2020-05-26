@@ -1,12 +1,14 @@
 import * as React from 'react';
 import { Formik, Form, Field, FormikConfig } from 'formik';
-import { Button, LinearProgress, useTheme } from '@material-ui/core';
+import { Button, LinearProgress, useTheme, Box } from '@material-ui/core';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import IconButton from '@material-ui/core/IconButton';
 import { TextField } from 'formik-material-ui';
+import { useHistory } from 'react-router-dom';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 interface Values {
   email: string;
@@ -31,6 +33,9 @@ interface Props {
 const LoginForm = ({ onSubmit }: Props) => {
   const classes = useStyles();
   const theme = useTheme();
+  const history = useHistory();
+  const isMobile = useMediaQuery(theme.breakpoints.down('xs'));
+
   const [showPassword, setShowPassword] = React.useState(false);
 
   const handleClickShowPassword = () => {
@@ -104,15 +109,32 @@ const LoginForm = ({ onSubmit }: Props) => {
           />
           {isSubmitting && <LinearProgress color="secondary" />}
           <br />
-          <Button
-            className={classes.button}
-            variant="contained"
-            color="primary"
-            disabled={isSubmitting}
-            onClick={submitForm}
+          <Box
+            display="flex"
+            flexDirection={isMobile ? 'column' : 'row'}
+            justifyContent="space-around"
           >
-            Inloggen
-          </Button>
+            <Button
+              className={classes.button}
+              variant="contained"
+              color="primary"
+              disabled={isSubmitting}
+              onClick={submitForm}
+              style={{ order: isMobile ? 1 : 2 }}
+            >
+              Inloggen
+            </Button>
+            <Button
+              className={classes.button}
+              variant="contained"
+              color="primary"
+              disabled={isSubmitting}
+              onClick={() => history.push('/register')}
+              style={{ order: isMobile ? 2 : 1 }}
+            >
+              Registeren
+            </Button>
+          </Box>
         </Form>
       )}
     </Formik>
