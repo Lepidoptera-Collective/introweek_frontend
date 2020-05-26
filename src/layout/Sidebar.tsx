@@ -19,8 +19,7 @@ import MenuItem from 'components/MenuItem';
 import logo from '../assets/logos/Logo.png';
 import { useHistory } from 'react-router-dom';
 import AuthService from 'services/auth';
-
-const drawerWidth = 240;
+import { DRAWER_WIDTH } from 'variables';
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -30,7 +29,7 @@ const useStyles = makeStyles((theme) =>
     drawerPaper: {
       position: 'relative',
       whiteSpace: 'nowrap',
-      width: drawerWidth,
+      width: DRAWER_WIDTH,
       paddingBottom: theme.spacing(4),
       background: theme.palette.background.paper,
       color: theme.palette.text.primary,
