@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "40d830542e7b81a50d5bf4356394aecf",
+    "revision": "c48b95ff5606cbabeb90ced506d174d1",
     "url": "/introweek_frontend/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/introweek_frontend/static/js/2.5e78e8b4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "091e46c7ccebf2e6353c",
-    "url": "/introweek_frontend/static/js/main.1f9f37e3.chunk.js"
+    "revision": "fd26083e89dd3d715142",
+    "url": "/introweek_frontend/static/js/main.9168c2c1.chunk.js"
   },
   {
     "revision": "d0bb557d2a074d2602c7",
