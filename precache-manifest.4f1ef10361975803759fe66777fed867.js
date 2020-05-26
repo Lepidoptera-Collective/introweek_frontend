@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dfe111ea30d942b3f2778f5f4604f99d",
+    "revision": "1fce8702e45d6da8bcc0fd0f5f896bbc",
     "url": "/introweek_frontend/index.html"
   },
   {
-    "revision": "760a168582602e43c593",
-    "url": "/introweek_frontend/static/js/2.5e78e8b4.chunk.js"
+    "revision": "a46dd2284c8031abb752",
+    "url": "/introweek_frontend/static/js/2.b216667f.chunk.js"
   },
   {
-    "revision": "8a9a2ae4a25f202f52818f8f8074424e",
-    "url": "/introweek_frontend/static/js/2.5e78e8b4.chunk.js.LICENSE.txt"
+    "revision": "b2f8cd6a06d980838cb5a45128345104",
+    "url": "/introweek_frontend/static/js/2.b216667f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4a3983b5a0cdfa046516",
-    "url": "/introweek_frontend/static/js/main.d4fe71a1.chunk.js"
+    "revision": "faaa580dc84de7af8c78",
+    "url": "/introweek_frontend/static/js/main.fc23aba3.chunk.js"
   },
   {
     "revision": "d0bb557d2a074d2602c7",
