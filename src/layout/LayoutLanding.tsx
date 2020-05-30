@@ -67,7 +67,13 @@ const LayoutLanding: React.FC = ({ children }) => {
             alt="introweek logo"
           />
         </Box>
-        <Box flex={1} alignSelf="center" component="main">
+        <Box
+          flex={1}
+          component="main"
+          display="flex"
+          flexDirection="column"
+          justifyContent="space-around"
+        >
           {isMobile && <div className={classes.toolbar} />}
           {children}
         </Box>

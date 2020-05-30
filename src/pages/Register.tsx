@@ -6,6 +6,7 @@ import LayoutLanding from 'layout/LayoutLanding';
 import RegisterForm from 'components/forms/Register';
 import AuthService from 'services/auth';
 import { useHistory } from 'react-router-dom';
+import { Typography } from '@material-ui/core';
 
 type RegisterFormProps = React.ComponentProps<typeof RegisterForm>;
 
@@ -25,6 +26,14 @@ const Register = () => {
 
   return (
     <LayoutLanding>
+      <Container>
+        <Typography variant="h2" align="center">
+          Introweek Haarlem
+        </Typography>
+        <Typography variant="h4" align="center">
+          ONLINE
+        </Typography>
+      </Container>
       <Container maxWidth="sm">
         <RegisterForm onSubmit={handleSubmit} />
       </Container>

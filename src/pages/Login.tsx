@@ -27,6 +27,14 @@ const Login = () => {
   return (
     <LayoutLanding>
       <Container maxWidth="sm">
+        <Typography variant="h2" align="center">
+          Introweek Haarlem
+        </Typography>
+        <Typography variant="h4" align="center">
+          ONLINE
+        </Typography>
+      </Container>
+      <Container maxWidth="sm">
         <Typography variant="subtitle1">
           Geen echte api call nog, kan gewoon fake data zijn
         </Typography>
