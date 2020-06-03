@@ -5,6 +5,7 @@ import Container from '@material-ui/core/Container';
 import LayoutLanding from 'layout/LayoutLanding';
 import AuthService from 'services/auth';
 import RegisterForm from 'components/forms/Register';
+import { createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
 import { useHistory, Link } from 'react-router-dom';
 import { Typography, Button, Box } from '@material-ui/core';
 
@@ -27,23 +28,21 @@ const Landingpage = () => {
     }, 500);
   };
 
+  let theme1 = createMuiTheme();
+  let theme2 = responsiveFontSizes(theme1, { factor: 15 });
+
   return (
     <LayoutLanding>
-      <Box
-        position="absolute"
-        top="3vh"
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-        width="50%"
-      >
+      <Box display="flex" alignItems="center" justifyContent="center">
         <Container maxWidth="sm">
-          <Typography variant="h2" align="center">
-            Introweek Haarlem
-          </Typography>
-          <Typography variant="h4" align="center">
-            ONLINE
-          </Typography>
+          <ThemeProvider theme={theme2}>
+            <Typography variant="h2" align="center">
+              Introweek Haarlem
+            </Typography>
+            <Typography variant="h4" align="center">
+              ONLINE
+            </Typography>
+          </ThemeProvider>
         </Container>
       </Box>
       <Box
@@ -63,7 +62,9 @@ const Landingpage = () => {
         >
           <FontAwesomeIcon icon={faUsers} size="2x" />
           <Box width="70%">
-            <Typography variant="h5">Leer je schoolgenoten kennen</Typography>
+            <ThemeProvider theme={theme2}>
+              <Typography variant="h5">Leer je schoolgenoten kennen</Typography>
+            </ThemeProvider>
           </Box>
         </Box>
         <Box
@@ -75,7 +76,9 @@ const Landingpage = () => {
         >
           <FontAwesomeIcon icon={faVideo} size="2x" />
           <Box width="70%">
-            <Typography variant="h5">24/7 livestream vol activiteiten</Typography>
+            <ThemeProvider theme={theme2}>
+              <Typography variant="h5">24/7 livestream vol activiteiten</Typography>
+            </ThemeProvider>
           </Box>
         </Box>
         <Box
@@ -87,12 +90,18 @@ const Landingpage = () => {
         >
           <FontAwesomeIcon icon={faGlassCheers} size="2x" />
           <Box width="70%">
-            <Typography variant="h5">Ook online is het feest</Typography>
+            <ThemeProvider theme={theme2}>
+              <Typography variant="h5">Ook online is het feest</Typography>
+            </ThemeProvider>
           </Box>
         </Box>
       </Box>
       <Box display="flex" flexDirection="column" alignItems="center" justifyContent="space-evenly">
-        <Typography variant="h4">Schrijf je hier meteen in voor de Online Introweek!</Typography>
+        <ThemeProvider theme={theme2}>
+          <Typography variant="h4" align="center">
+            Schrijf je hier meteen in voor de Online Introweek!
+          </Typography>
+        </ThemeProvider>
         <Container maxWidth="sm">
           <RegisterForm onSubmit={handleSubmit} />
         </Container>
