@@ -1,8 +1,8 @@
 import red from '@material-ui/core/colors/red';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
 // A custom theme for this app
-const theme = createMuiTheme({
+let theme = createMuiTheme({
   overrides: {
     MuiCssBaseline: {
       '@global': {
@@ -37,5 +37,7 @@ const theme = createMuiTheme({
     },
   },
 });
+
+theme = responsiveFontSizes(theme, { factor: 15 });
 
 export default theme;

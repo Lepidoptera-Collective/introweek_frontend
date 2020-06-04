@@ -28,21 +28,16 @@ const Landingpage = () => {
     }, 500);
   };
 
-  let theme1 = createMuiTheme();
-  let theme2 = responsiveFontSizes(theme1, { factor: 15 });
-
   return (
     <LayoutLanding>
       <Box display="flex" alignItems="center" justifyContent="center">
         <Container maxWidth="sm">
-          <ThemeProvider theme={theme2}>
-            <Typography variant="h2" align="center">
-              Introweek Haarlem
-            </Typography>
-            <Typography variant="h4" align="center">
-              ONLINE
-            </Typography>
-          </ThemeProvider>
+          <Typography variant="h2" align="center">
+            Introweek Haarlem
+          </Typography>
+          <Typography variant="h4" align="center">
+            ONLINE
+          </Typography>
         </Container>
       </Box>
       <Box
@@ -62,9 +57,7 @@ const Landingpage = () => {
         >
           <FontAwesomeIcon icon={faUsers} size="2x" />
           <Box width="70%">
-            <ThemeProvider theme={theme2}>
-              <Typography variant="h5">Leer je schoolgenoten kennen</Typography>
-            </ThemeProvider>
+            <Typography variant="h5">Leer je schoolgenoten kennen</Typography>
           </Box>
         </Box>
         <Box
@@ -76,9 +69,7 @@ const Landingpage = () => {
         >
           <FontAwesomeIcon icon={faVideo} size="2x" />
           <Box width="70%">
-            <ThemeProvider theme={theme2}>
-              <Typography variant="h5">24/7 livestream vol activiteiten</Typography>
-            </ThemeProvider>
+            <Typography variant="h5">24/7 livestream vol activiteiten</Typography>
           </Box>
         </Box>
         <Box
@@ -90,18 +81,14 @@ const Landingpage = () => {
         >
           <FontAwesomeIcon icon={faGlassCheers} size="2x" />
           <Box width="70%">
-            <ThemeProvider theme={theme2}>
-              <Typography variant="h5">Ook online is het feest</Typography>
-            </ThemeProvider>
+            <Typography variant="h5">Ook online is het feest</Typography>
           </Box>
         </Box>
       </Box>
       <Box display="flex" flexDirection="column" alignItems="center" justifyContent="space-evenly">
-        <ThemeProvider theme={theme2}>
-          <Typography variant="h4" align="center">
-            Schrijf je hier meteen in voor de Online Introweek!
-          </Typography>
-        </ThemeProvider>
+        <Typography variant="h4" align="center">
+          Schrijf je hier meteen in voor de Online Introweek!
+        </Typography>
         <Container maxWidth="sm">
           <RegisterForm onSubmit={handleSubmit} />
         </Container>
