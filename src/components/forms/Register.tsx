@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Formik, Form, Field, FormikConfig } from 'formik';
-import { Button, LinearProgress, useTheme } from '@material-ui/core';
+import { Button, LinearProgress, useTheme, Box } from '@material-ui/core';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { TextField } from 'formik-material-ui';
 
@@ -58,15 +58,17 @@ const LoginForm = ({ onSubmit }: Props) => {
           />
           {isSubmitting && <LinearProgress color="secondary" />}
           <br />
-          <Button
-            className={classes.button}
-            variant="contained"
-            color="primary"
-            disabled={isSubmitting}
-            onClick={submitForm}
-          >
-            Registreer
-          </Button>
+          <Box display="flex" alignItems="center" width="100%" justifyContent="space-around">
+            <Button
+              className={classes.button}
+              variant="contained"
+              color="primary"
+              disabled={isSubmitting}
+              onClick={submitForm}
+            >
+              Registreer
+            </Button>
+          </Box>
         </Form>
       )}
     </Formik>
