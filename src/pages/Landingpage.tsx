@@ -120,7 +120,7 @@ const Landingpage = () => {
             borderRadius="20px"
           >
             {boxVisible && (
-              <img src={introbox} height="100%" onClick={() => setContentsVisible(true)} />
+              <img className="boxImage" src={introbox} onClick={() => setContentsVisible(true)} />
             )}
 
             <CSSTransition
