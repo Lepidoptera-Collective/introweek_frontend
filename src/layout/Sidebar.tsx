@@ -18,7 +18,7 @@ import IconPersonOutline from '@material-ui/icons/PersonOutline';
 import MenuItem from 'components/MenuItem';
 import logo from '../assets/logos/Logo.png';
 import { useHistory } from 'react-router-dom';
-import AuthService from 'services/auth';
+import { AuthService } from 'services';
 import { DRAWER_WIDTH } from 'variables';
 
 const useStyles = makeStyles((theme) =>

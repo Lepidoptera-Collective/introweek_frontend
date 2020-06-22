@@ -1,26 +1,30 @@
 import React from 'react';
 
 import Container from '@material-ui/core/Container';
+import { useHistory } from 'react-router-dom';
 
 import LayoutLanding from 'layout/LayoutLanding';
 import RegisterForm from 'components/forms/Register';
-import AuthService from 'services/auth';
-import { useHistory } from 'react-router-dom';
+import { AccountService, AuthService } from 'services';
 
 type RegisterFormProps = React.ComponentProps<typeof RegisterForm>;
 
 const Register = () => {
   const history = useHistory();
-  const handleSubmit: RegisterFormProps['onSubmit'] = (values, { setSubmitting }) => {
-    setTimeout(() => {
-      setSubmitting(false);
-      // !!! Fake token for testing.
-      AuthService.storeToken(
-        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAc3Rlc3QuY29tIiwiZXhwIjoxNTkwNDIyMTk0Njg5LCJpYXQiOjE1MTYyMzkwMjJ9.uTHUr3uoVW5liyHtam5to6z_wAlGlzs22Gn8kz8MOZ0'
-      );
 
+  const handleSubmit: RegisterFormProps['onSubmit'] = async (values, { setSubmitting }) => {
+    try {
+      const data = await AccountService.register(values.email, 'password', 'study');
+
+      setSubmitting(false);
+
+      AuthService.setToken(data.token);
       history.push('/');
-    }, 500);
+    } catch (err) {
+      setSubmitting(false);
+      // TODO: Error handling
+      console.error(err);
+    }
   };
 
   return (

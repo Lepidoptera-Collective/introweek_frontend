@@ -1,9 +1,8 @@
 import React from 'react';
 
-import Cookie from 'js-cookie';
 import { Route as DomRoute, RouteProps, Redirect } from 'react-router-dom';
 
-import AuthService, { TOKEN_STORAGE_KEY } from 'services/auth';
+import { AuthService } from 'services';
 
 interface Props extends RouteProps {
   component?: any;
@@ -18,9 +17,6 @@ const Route: React.FC<Props> = ({
   isPublic = false,
   ...rest
 }) => {
-  const token = Cookie.get(TOKEN_STORAGE_KEY);
-  const auth = new AuthService(token);
-
   return (
     <DomRoute {...rest}>
       {(props) => {
@@ -28,7 +24,7 @@ const Route: React.FC<Props> = ({
          * If not logged in and trying to access a protected route, route to login
          * If logged in and trying to access a "public" only route, route to home
          */
-        if (!auth.isValid && isProtected) {
+        if (!AuthService.isValid && isProtected) {
           return (
             <Redirect
               to={{
@@ -39,7 +35,7 @@ const Route: React.FC<Props> = ({
           );
         }
 
-        if (auth.isValid && isPublic) {
+        if (AuthService.isValid && isPublic) {
           return (
             <Redirect
               to={{

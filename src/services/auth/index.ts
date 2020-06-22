@@ -9,22 +9,13 @@ export interface DecodedToken {
 export const TOKEN_STORAGE_KEY = 'introweek.authToken';
 
 class AuthService {
-  readonly decodedToken: DecodedToken;
-
-  constructor(readonly token?: string) {
-    this.decodedToken = { email: '', exp: 0 };
-
-    try {
-      if (token) this.decodedToken = jwtDecode(token);
-    } catch (e) {}
-  }
-
-  get authorizationString() {
-    return `Bearer ${this.token}`;
-  }
-
   get expiresAt() {
-    return new Date(this.decodedToken.exp * 1000);
+    if (!this.token) {
+      return new Date(0);
+    }
+
+    const decodedToken: DecodedToken = jwtDecode(this.token);
+    return new Date(decodedToken.exp * 1000);
   }
 
   get isExpired() {
@@ -35,13 +26,17 @@ class AuthService {
     return !this.isExpired;
   }
 
-  static storeToken(token: string) {
+  get token() {
+    return Cookie.get(TOKEN_STORAGE_KEY) || '';
+  }
+
+  setToken(token: string) {
     Cookie.set(TOKEN_STORAGE_KEY, token);
   }
 
-  static removeToken() {
+  removeToken() {
     Cookie.remove(TOKEN_STORAGE_KEY);
   }
 }
 
-export default AuthService;
+export default new AuthService();
